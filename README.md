@@ -2,7 +2,11 @@
 
 Codify is an offline Android app that teaches programming to beginners. Each lesson explains a concept, lets you edit and run the example code right on your phone, then tests you with a quiz and a fill-in-the-blank code exercise.
 
+<<<<<<< HEAD
 Right now it teaches **Python** (44 lessons, from "Hello, world!" to object-oriented programming) **Linux commands** (20 lessons, from `pwd` and `ls` to `grep`, pipes and `chmod`) and **HTML** (59 lessons, from the first tag to forms, media, SVG, Canvas and Web APIs), in **English** and **Greek**.
+=======
+Right now it teaches **Python** (44 lessons, from "Hello, world!" to object-oriented programming), in **English** and **Greek**.
+>>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
 
 ## Tested on
 
@@ -10,10 +14,15 @@ The app has been tested on a **Samsung Galaxy Z Flip 4**.
 
 ## Features
 
+<<<<<<< HEAD
 - **44 Python lessons**, **20 Linux lessons** and **59 HTML lessons**, unlocked one by one as you complete them.
 - **Linux lessons** show the commands with their expected output (the app cannot run a Linux shell, so there is no Run button there; try the commands in a real terminal).
 - **HTML lessons** have a **Preview** button that renders your code in a WebView, offline. JavaScript is on (the JavaScript, Canvas and Web API lessons need it), file access is off and links do not open.
 - **Run code in the app** (Python lessons): edit the example and press Run. Python 3.11 runs on the phone through [Chaquopy](https://chaquo.com/chaquopy/), with no internet needed. Code is limited to 3 seconds so an endless loop can't freeze the app.
+=======
+- **44 Python lessons**, unlocked one by one as you complete them.
+- **Run code in the app**: edit the example and press Run. Python 3.11 runs on the phone through [Chaquopy](https://chaquo.com/chaquopy/), with no internet needed. Code is limited to 3 seconds so an endless loop can't freeze the app.
+>>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
 - **Quiz** at the end of every lesson.
 - **Fill-in-the-blank test** after the quiz: the lesson's code is shown with gaps and you type the missing parts. Wrong gaps turn red, correct ones turn green. The lesson is completed (+10 points) only when every gap is correct.
 - **Progress and points** saved on the device.
@@ -71,7 +80,11 @@ app/src/main/
 
 - **New lesson**: add a `Lesson(...)` to both `LessonsData.kt` and `LessonsDataEn.kt` with the same unique `id` (never change an `id` later), then add its exercise to `FillBlanksData.kt` using that `id`.
 - **Fill-in-the-blank exercise**: write the code with `___` for each gap, then list the accepted answers for each gap in order. Every lesson needs one, otherwise its last step will be empty.
+<<<<<<< HEAD
 - **New programming language**: add a `Language(...)` to `LanguagesData.kt` and lessons whose `category` matches the language `name`. Set `runnable = false` for languages the app cannot execute (like Linux) and give each lesson a `sampleOutput` to show instead of the Run button. Set `previewHtml = true` as well to get a rendered Preview button instead (like HTML).
+=======
+- **New programming language**: add a `Language(...)` to `LanguagesData.kt` and lessons whose `category` matches the language `name`.
+>>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
 - **New app language**: add a value to `AppLanguage`, a new `Strings` implementation, and the lessons for it.
 
 ## App icon

@@ -54,11 +54,14 @@ fun LessonScreen(lesson: Lesson, onBack: () -> Unit, onStartQuiz: () -> Unit) {
     var running by remember { mutableStateOf(value = false) }
     val scope = rememberCoroutineScope()
     val s = LocalStrings.current
+<<<<<<< HEAD
     val language = s.programmingLanguages
         .firstOrNull { it.name.equals(lesson.category, ignoreCase = true) }
     val runnable = language?.runnable ?: true
     val previewHtml = language?.previewHtml ?: false
     var previewCode by remember(lesson.id) { mutableStateOf<String?>(null) }
+=======
+>>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
 
     Scaffold(
         topBar = {
@@ -109,6 +112,7 @@ fun LessonScreen(lesson: Lesson, onBack: () -> Unit, onStartQuiz: () -> Unit) {
 
             Spacer(Modifier.height(4.dp))
             Text(s.codeExample, style = MaterialTheme.typography.titleMedium)
+<<<<<<< HEAD
             CodeEditor(
                 code = code,
                 onCodeChange = { code = it },
@@ -194,6 +198,41 @@ fun LessonScreen(lesson: Lesson, onBack: () -> Unit, onStartQuiz: () -> Unit) {
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
+=======
+            CodeEditor(code = code, onCodeChange = { code = it })
+
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                FilledTonalButton(
+                    enabled = !running,
+                    onClick = {
+                        SoundManager.playClick()
+                        running = true
+                        scope.launch {
+                            result = PythonRunner.run(code, s.unknownError, s.languageCode)
+                            running = false
+                        }
+                    },
+                ) {
+                    Icon(Icons.Default.PlayArrow, contentDescription = null)
+                    Spacer(Modifier.width(8.dp))
+                    Text(if (running) s.running else s.run)
+                }
+                Spacer(Modifier.width(8.dp))
+                TextButton(
+                    onClick = {
+                        SoundManager.playClick()
+                        code = lesson.codeExample
+                        result = null
+                    },
+                ) {
+                    Icon(Icons.Default.Refresh, contentDescription = null)
+                    Spacer(Modifier.width(8.dp))
+                    Text(s.restore)
+                }
+            }
+
+            result?.let { OutputPanel(it) }
+>>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
         }
     }
 }

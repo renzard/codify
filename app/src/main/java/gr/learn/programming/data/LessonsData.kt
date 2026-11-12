@@ -1061,6 +1061,7 @@ val lessonsEl: List<Lesson> = listOf(
             correctOptionIndex = 0,
         ),
     ),
+<<<<<<< HEAD
     Lesson(
         id = "linux_intro",
         title = "1. Τι είναι το Linux",
@@ -2790,4 +2791,6 @@ val lessonsEl: List<Lesson> = listOf(
             correctOptionIndex = 3,
         ),
     ),
+=======
+>>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
 )

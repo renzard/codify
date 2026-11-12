@@ -47,11 +47,14 @@ object GreekStrings : Strings {
     override val codeEditorHeader = "Python · μπορείς να αλλάξεις τον κώδικα"
     override val output = "Έξοδος"
     override val noOutput = "(ο κώδικας δεν τύπωσε τίποτα)"
+<<<<<<< HEAD
     override val sampleOutputTitle = "Παράδειγμα εξόδου"
     override val preview = "Προεπισκόπηση"
     override val previewTitle = "Αποτέλεσμα"
     override val notRunnableHint = "Οι εντολές αυτές τρέχουν σε τερματικό Linux, όχι μέσα στην εφαρμογή. Δοκίμασέ τες στον υπολογιστή σου."
     override fun editorHeader(languageName: String) = "$languageName · μπορείς να αλλάξεις τον κώδικα"
+=======
+>>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
 
     // Quiz
     override val correctAnswer = "Σωστή απάντηση!"

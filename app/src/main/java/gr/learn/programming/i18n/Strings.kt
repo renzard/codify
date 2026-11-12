@@ -50,11 +50,14 @@ interface Strings {
     val codeEditorHeader: String
     val output: String
     val noOutput: String
+<<<<<<< HEAD
     val sampleOutputTitle: String
     val preview: String
     val previewTitle: String
     val notRunnableHint: String
     fun editorHeader(languageName: String): String
+=======
+>>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
 
     // Quiz
     val correctAnswer: String

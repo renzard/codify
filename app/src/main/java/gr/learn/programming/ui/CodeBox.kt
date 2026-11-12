@@ -1,6 +1,7 @@
 package gr.learn.programming.ui
 
 import androidx.compose.foundation.background
+<<<<<<< HEAD
 import android.webkit.WebResourceRequest
 import android.annotation.SuppressLint
 import android.webkit.WebView
@@ -8,6 +9,9 @@ import android.webkit.WebViewClient
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.height
 import androidx.compose.ui.viewinterop.AndroidView
+=======
+import androidx.compose.foundation.layout.Column
+>>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -43,7 +47,11 @@ private val MonoStyle = TextStyle(
 
 /** Σκούρο, επεξεργάσιμο κουτί κώδικα με monospace γραμματοσειρά. */
 @Composable
+<<<<<<< HEAD
 fun CodeEditor(code: String, onCodeChange: (String) -> Unit, modifier: Modifier = Modifier, header: String? = null) {
+=======
+fun CodeEditor(code: String, onCodeChange: (String) -> Unit, modifier: Modifier = Modifier) {
+>>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
     val s = LocalStrings.current
     Column(
         modifier
@@ -52,7 +60,11 @@ fun CodeEditor(code: String, onCodeChange: (String) -> Unit, modifier: Modifier 
             .background(CodeBackground),
     ) {
         Text(
+<<<<<<< HEAD
             text = header ?: s.codeEditorHeader,
+=======
+            text = s.codeEditorHeader,
+>>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
             color = CodeText,
             fontSize = 13.sp,
             fontWeight = FontWeight.SemiBold,
@@ -74,6 +86,7 @@ fun CodeEditor(code: String, onCodeChange: (String) -> Unit, modifier: Modifier 
     }
 }
 
+<<<<<<< HEAD
 /**
  * Δείχνει τον HTML κώδικα ως ιστοσελίδα. Η JavaScript είναι ανοιχτή, γιατί τα μαθήματα (JavaScript, Canvas, Web APIs)
  * τη χρειάζονται· το περιεχόμενο είναι μόνο ο κώδικας των μαθημάτων. Η πρόσβαση σε αρχεία είναι κλειστή και οι σύνδεσμοι δεν ανοίγουν.
@@ -137,6 +150,8 @@ fun SampleOutputPanel(text: String, title: String, modifier: Modifier = Modifier
     }
 }
 
+=======
+>>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
 /** Εμφανίζει την έξοδο (ή το σφάλμα) από την εκτέλεση της Python. */
 @Composable
 fun OutputPanel(result: RunResult, modifier: Modifier = Modifier) {

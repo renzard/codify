@@ -47,11 +47,14 @@ object EnglishStrings : Strings {
     override val codeEditorHeader = "Python · you can edit the code"
     override val output = "Output"
     override val noOutput = "(the code printed nothing)"
+<<<<<<< HEAD
     override val sampleOutputTitle = "Sample output"
     override val preview = "Preview"
     override val previewTitle = "Result"
     override val notRunnableHint = "These commands run in a Linux terminal, not inside the app. Try them on your computer."
     override fun editorHeader(languageName: String) = "$languageName · you can edit the code"
+=======
+>>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
 
     // Quiz
     override val correctAnswer = "Correct answer!"

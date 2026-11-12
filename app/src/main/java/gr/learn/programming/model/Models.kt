@@ -14,10 +14,13 @@ data class Language(
     val description: String,
     /** Μικρό σύμβολο που εμφανίζεται μέσα στον κύκλο της κάρτας, π.χ. «Py». */
     val badge: String,
+<<<<<<< HEAD
     /** false = τα παραδείγματα δεν εκτελούνται μέσα στην εφαρμογή (π.χ. εντολές Linux). */
     val runnable: Boolean = true,
     /** true = το παράδειγμα εμφανίζεται ως ιστοσελίδα σε WebView (HTML). */
     val previewHtml: Boolean = false,
+=======
+>>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
 )
 
 data class Lesson(
@@ -27,8 +30,11 @@ data class Lesson(
     val description: String,
     val codeExample: String,
     val quiz: Quiz,
+<<<<<<< HEAD
     /** Αναμενόμενη έξοδος για γλώσσες που δεν εκτελούνται στην εφαρμογή (runnable = false). */
     val sampleOutput: String? = null,
+=======
+>>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
 )
 
 data class UserProgress(
