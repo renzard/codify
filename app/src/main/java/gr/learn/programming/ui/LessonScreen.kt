@@ -1,6 +1,5 @@
 package gr.learn.programming.ui
 
-import gr.learn.programming.util.SoundManager
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -40,11 +39,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import gr.learn.programming.i18n.LocalStrings
 import gr.learn.programming.model.Lesson
 import gr.learn.programming.python.PythonRunner
 import gr.learn.programming.python.RunResult
+import gr.learn.programming.util.SoundManager
 import kotlinx.coroutines.launch
-import gr.learn.programming.i18n.LocalStrings
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -54,14 +54,11 @@ fun LessonScreen(lesson: Lesson, onBack: () -> Unit, onStartQuiz: () -> Unit) {
     var running by remember { mutableStateOf(value = false) }
     val scope = rememberCoroutineScope()
     val s = LocalStrings.current
-<<<<<<< HEAD
     val language = s.programmingLanguages
         .firstOrNull { it.name.equals(lesson.category, ignoreCase = true) }
     val runnable = language?.runnable ?: true
     val previewHtml = language?.previewHtml ?: false
     var previewCode by remember(lesson.id) { mutableStateOf<String?>(null) }
-=======
->>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
 
     Scaffold(
         topBar = {
@@ -112,7 +109,6 @@ fun LessonScreen(lesson: Lesson, onBack: () -> Unit, onStartQuiz: () -> Unit) {
 
             Spacer(Modifier.height(4.dp))
             Text(s.codeExample, style = MaterialTheme.typography.titleMedium)
-<<<<<<< HEAD
             CodeEditor(
                 code = code,
                 onCodeChange = { code = it },
@@ -198,41 +194,6 @@ fun LessonScreen(lesson: Lesson, onBack: () -> Unit, onStartQuiz: () -> Unit) {
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
-=======
-            CodeEditor(code = code, onCodeChange = { code = it })
-
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                FilledTonalButton(
-                    enabled = !running,
-                    onClick = {
-                        SoundManager.playClick()
-                        running = true
-                        scope.launch {
-                            result = PythonRunner.run(code, s.unknownError, s.languageCode)
-                            running = false
-                        }
-                    },
-                ) {
-                    Icon(Icons.Default.PlayArrow, contentDescription = null)
-                    Spacer(Modifier.width(8.dp))
-                    Text(if (running) s.running else s.run)
-                }
-                Spacer(Modifier.width(8.dp))
-                TextButton(
-                    onClick = {
-                        SoundManager.playClick()
-                        code = lesson.codeExample
-                        result = null
-                    },
-                ) {
-                    Icon(Icons.Default.Refresh, contentDescription = null)
-                    Spacer(Modifier.width(8.dp))
-                    Text(s.restore)
-                }
-            }
-
-            result?.let { OutputPanel(it) }
->>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
         }
     }
 }

@@ -9,7 +9,6 @@ val languagesEl: List<Language> = listOf(
         description = "Ιδανική για αρχάριους. Καθαρή σύνταξη, πανίσχυρη και εξαιρετικά δημοφιλής γλώσσα προγραμματισμού.",
         badge = "Py",
     ),
-<<<<<<< HEAD
     Language(
         id = "linux",
         name = "Linux",
@@ -25,8 +24,6 @@ val languagesEl: List<Language> = listOf(
         runnable = false,
         previewHtml = true,
     ),
-=======
->>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
 )
 
 val languagesEn: List<Language> = listOf(
@@ -36,7 +33,6 @@ val languagesEn: List<Language> = listOf(
         description = "Ideal for beginners. Clean syntax, and a powerful and extremely popular programming language.",
         badge = "Py",
     ),
-<<<<<<< HEAD
     Language(
         id = "linux",
         name = "Linux",
@@ -52,6 +48,4 @@ val languagesEn: List<Language> = listOf(
         runnable = false,
         previewHtml = true,
     ),
-=======
->>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
 )

@@ -19,6 +19,6 @@ enum class AppLanguage(val code: String, val nativeName: String) {
         val DEFAULT = ENGLISH
 
         fun fromCode(code: String?): AppLanguage =
-            values().firstOrNull { it.code == code } ?: DEFAULT
+            entries.firstOrNull { it.code == code } ?: DEFAULT
     }
 }

@@ -624,7 +624,6 @@ val fillBlanks: Map<String, FillBlank> = mapOf(
         """,
         b("Engine"), b("describe"),
     ),
-<<<<<<< HEAD
     "linux_intro" to fb(
         """
         ___ "Hello, Linux!"
@@ -1284,6 +1283,4 @@ val fillBlanks: Map<String, FillBlank> = mapOf(
     """,
         b("header"), b("main"),
     ),
-=======
->>>>>>> 631cd6e1e97d010cb81b07551d6836e85c298b6c
 )
