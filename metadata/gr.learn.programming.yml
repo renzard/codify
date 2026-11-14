@@ -1,0 +1,33 @@
+Categories:
+  - Education
+  - Development
+License: GPL-3.0-or-later
+SourceCode: https://github.com/learn-programming/codify
+IssueTracker: https://github.com/learn-programming/codify/issues
+
+AutoName: Codify
+Summary: Learn programming interactively with offline Python code execution
+Description: |-
+  Codify is an open-source, offline-first interactive learning app designed to teach programming concepts step by step.
+
+  Features:
+  * Interactive Python code editor with real-time on-device code execution via Chaquopy
+  * Support for multiple programming topics including Python, HTML/CSS, and Linux commands
+  * Interactive quizzes and fill-in-the-blank exercises
+  * Dual language interface (English & Greek)
+  * 100% free and open-source, no ads, no tracking, no permissions required
+
+RepoType: git
+Repo: https://github.com/learn-programming/codify.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 3 versions
+AutoUpdateMode: None
+UpdateCheckMode: None

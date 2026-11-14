@@ -16,16 +16,25 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        // Το Chaquopy απαιτεί ρητή λίστα αρχιτεκτονικών.
-        // Πρόσθεσε "armeabi-v7a" αν θέλεις να υποστηρίξεις παλιά 32-bit κινητά.
+        // Chaquopy ABI filters: include all standard 32-bit and 64-bit architectures for maximum device compatibility.
         ndk {
-            abiFilters += listOf("arm64-v8a", "x86_64")
+            abiFilters += listOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
         }
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+
+    packaging {
+        jniLibs {
+            useLegacyPackaging = true
         }
     }
 
